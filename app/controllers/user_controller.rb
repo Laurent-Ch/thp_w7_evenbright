@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class UserController < ApplicationController
-before_action :authenticate_user!, :same_user?
+  before_action :authenticate_user!, :same_user?
 
   def show
     @user = User.find(params[:id])
@@ -12,7 +14,8 @@ before_action :authenticate_user!, :same_user?
 
   def update
     @user = current_user
-    if @user.update(first_name: params[:user_first_name], last_name: params[:user_last_name], description: params[:user_description])
+    if @user.update(first_name: params[:user_first_name], last_name: params[:user_last_name],
+                    description: params[:user_description])
       redirect_to user_path(@current_user.id), success: 'Profil édité !'
     else
       flash[:danger] = "Le profil n'a pas pu être édité !"
@@ -35,5 +38,4 @@ before_action :authenticate_user!, :same_user?
     @user = User.find(params[:id])
     current_user == @user ? nil : (redirect_to root_path)
   end
-
 end

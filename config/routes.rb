@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root 'event#index'
   devise_for :users
@@ -5,5 +7,4 @@ Rails.application.routes.draw do
   resources :home
   resources :user
   resources :event
-
 end
