@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> Bonne nouvelle <%= @host.first_name %> !</h1>
+    <p>
+      Un nouvel utilisateur vient de s'inscrire à ton événement <%= @event.title %>.
+    </p>
+    <p>
+      Pour accéder à l'espace de gestion de l'événement, connecte-toi via : <%= @url %>.
+    </p>
+    <p> À très vite sur Eventbright !
+  </body>
+</html>

@@ -1,0 +1,46 @@
+                   Prefix Verb   URI Pattern                                                                              Controller#Action
+                     root GET    /                                                                                        event#index
+         new_user_session GET    /users/sign_in(.:format)                                                                 devise/sessions#new
+             user_session POST   /users/sign_in(.:format)                                                                 devise/sessions#create
+     destroy_user_session DELETE /users/sign_out(.:format)                                                                devise/sessions#destroy
+        new_user_password GET    /users/password/new(.:format)                                                            devise/passwords#new
+       edit_user_password GET    /users/password/edit(.:format)                                                           devise/passwords#edit
+            user_password PATCH  /users/password(.:format)                                                                devise/passwords#update
+                          PUT    /users/password(.:format)                                                                devise/passwords#update
+                          POST   /users/password(.:format)                                                                devise/passwords#create
+ cancel_user_registration GET    /users/cancel(.:format)                                                                  devise/registrations#cancel
+    new_user_registration GET    /users/sign_up(.:format)                                                                 devise/registrations#new
+   edit_user_registration GET    /users/edit(.:format)                                                                    devise/registrations#edit
+        user_registration PATCH  /users(.:format)                                                                         devise/registrations#update
+                          PUT    /users(.:format)                                                                         devise/registrations#update
+                          DELETE /users(.:format)                                                                         devise/registrations#destroy
+                          POST   /users(.:format)                                                                         devise/registrations#create
+               home_index GET    /home(.:format)                                                                          home#index
+                          POST   /home(.:format)                                                                          home#create
+                 new_home GET    /home/new(.:format)                                                                      home#new
+                edit_home GET    /home/:id/edit(.:format)                                                                 home#edit
+                     home GET    /home/:id(.:format)                                                                      home#show
+                          PATCH  /home/:id(.:format)                                                                      home#update
+                          PUT    /home/:id(.:format)                                                                      home#update
+                          DELETE /home/:id(.:format)                                                                      home#destroy
+               user_index GET    /user(.:format)                                                                          user#index
+                          POST   /user(.:format)                                                                          user#create
+                 new_user GET    /user/new(.:format)                                                                      user#new
+                edit_user GET    /user/:id/edit(.:format)                                                                 user#edit
+                     user GET    /user/:id(.:format)                                                                      user#show
+                          PATCH  /user/:id(.:format)                                                                      user#update
+                          PUT    /user/:id(.:format)                                                                      user#update
+                          DELETE /user/:id(.:format)                                                                      user#destroy
+              event_index GET    /event(.:format)                                                                         event#index
+                          POST   /event(.:format)                                                                         event#create
+                new_event GET    /event/new(.:format)                                                                     event#new
+               edit_event GET    /event/:id/edit(.:format)                                                                event#edit
+                    event GET    /event/:id(.:format)                                                                     event#show
+                          PATCH  /event/:id(.:format)                                                                     event#update
+                          PUT    /event/:id(.:format)                                                                     event#update
+                          DELETE /event/:id(.:format)                                                                     event#destroy
+       rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+       rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create

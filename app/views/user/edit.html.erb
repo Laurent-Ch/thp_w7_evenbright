@@ -1,0 +1,49 @@
+<section class="mx-auto" style="width: 500px;">
+
+<div class="row d-flex justify-content-around">
+
+<!--Grid column-->
+<div class="col-md-9 mb-md-0 mb-5">
+<br>
+<h2 class="h3-responsive font-weight-bold text-center my-4">Edite ton profil</h2>
+            <%= form_tag url_for(action: 'update'), method: 'patch', class: 'contact-form', id: 'contact-form' do %>
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+                        <div class="md-form mb-0 form-group">
+                          <%= label_tag :user_first_name, "Prénom" %>
+                          <%= text_field_tag :user_first_name , nil, class: 'form-control', value: @user.first_name%>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0 form-group">
+                          <%= label_tag :user_last_name, "Nom" %>
+                          <%= text_field_tag :user_last_name , nil, class: 'form-control', value: @user.last_name%>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0 form-group">
+                          <%= label_tag :user_description, "Description" %>
+                          <%= text_field_tag :user_description , nil, class: 'form-control', value: @user.description%>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <div class="text-center text-md-left">
+                  <%= submit_tag "C'est parti !", class: 'btn btn-danger form-control' %>
+                </div>
+
+                <div class="status"></div>
+                <br>
+        <% end%>
+</section>
