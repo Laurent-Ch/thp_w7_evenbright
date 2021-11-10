@@ -9,6 +9,6 @@ Réalisé par la team Bréguette_qui-n'y-est-plus-vraiment **Mathias** **Laurent
 
 ## Rendez-vous ici
 
-https://eventbright-paris-thp.herokuapp.com/
+https://thp-eventbright-v2.herokuapp.com/
 
 *et c'est parti !*
