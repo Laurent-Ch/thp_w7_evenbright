@@ -17,7 +17,6 @@ class AttendanceController < ApplicationController
   end
 
   def create
-
     @user = current_user
     @event = Event.find(params[:event_id])
     @amount = (@event.price)
@@ -33,7 +32,7 @@ class AttendanceController < ApplicationController
       description: "Achat d'un produit",
       currency: 'eur',
       })
-
+      
       @attendance = Attendance.create(guest: @user, event: @event, stripe_customer_id: customer.id)
 
     rescue Stripe::CardError => e
