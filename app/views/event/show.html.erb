@@ -7,9 +7,10 @@
             <div class="my-3 mx-3">
               <h3><%= @event.title%></h3>
               <p>Du <%= @start_date %> au <%= @end_date %></p>
-              <button type="button" class="btn btn-outline-light" data-mdb-ripple-color="dark" style="z-index: 1;">
+              <%# <button type="button" class="btn btn-outline-light" data-mdb-ripple-color="dark" style="z-index: 1;">
                 Acheter une place
-              </button>
+              </button> %>
+              <button type="button" class="btn btn-outline-light" data-mdb-ripple-color="dark" style="z-index: 1;"><%= link_to "Participer", new_event_attendance_path(@event.id) %>
             </div>
           </div>
           <div class="p-4 text-black" style="background-color: #f8f9fa;">

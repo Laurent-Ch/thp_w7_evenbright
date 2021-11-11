@@ -74,3 +74,5 @@ gem 'better_errors'
 gem 'dotenv-rails'
 
 gem 'devise'
+
+gem 'stripe'

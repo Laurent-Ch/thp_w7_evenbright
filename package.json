@@ -1,5 +1,7 @@
 {
   "name": "EventBright",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "yarn": "^1.22.17"
+  }
 }

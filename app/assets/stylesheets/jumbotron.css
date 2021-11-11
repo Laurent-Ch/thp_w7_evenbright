@@ -1,0 +1,6 @@
+.jumbotron {
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('https://www.yvelines-infos.fr/content/uploads/2019/pierre-auguste-renoir---luncheon-of-the-boating-party---google-art-project.jpg');
+  background-size: cover;
+  background-position: center;
+  text-shadow: black 0px 0px 5px;
+}
