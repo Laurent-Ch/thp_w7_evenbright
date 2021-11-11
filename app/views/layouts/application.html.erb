@@ -45,8 +45,8 @@
         Mon profil
       </a>
       <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-      <li><%= link_to "Mon profil", user_path(current_user.id), class: "text-white my-2 my-sm-0"%></li>
-      <li><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, data: { confirm: "Prêt à vous déconnecter ?" }, class: "text-white my-2 my-sm-0" %></li>
+      <li><a class="text-white my-2 my-sm-0"><%= link_to "Mon profil", user_path(current_user.id)%></a></li>
+      <li><a class="text-white my-2 my-sm-0"><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, data: { confirm: "Prêt à vous déconnecter ?" } %></a></li>
       </ul>
     </li>
   </ul>
@@ -61,8 +61,8 @@
         S'inscrire / Se connecter
       </a>
       <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-      <li><%= link_to "Se connecter", new_user_session_path, class: "text-white my-2 my-sm-0" %></li>
-      <li><%= link_to 'Créer un compte', new_user_registration_path, class: "text-white my-2 my-sm-0" %></li>
+      <li><a class="my-2 my-sm-0"><%= link_to "Se connecter", new_user_session_path %></a></li>
+      <li><a class="my-2 my-sm-0"><%= link_to 'Créer un compte', new_user_registration_path %></a></li>
       </ul>
     </li>
   </ul>

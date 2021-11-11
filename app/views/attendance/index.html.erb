@@ -1,0 +1,20 @@
+<div class="row d-flex justify-content-around">
+      <div class="col">
+
+<div class="row justify-content-center">
+  <%@attendances.each do |attendance|%>
+    <div class="card border-info my-2 mx-3 border-radius rounded" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Participant numéro <%= @attendances.index(attendance) + 1 %> : </h5>
+        <p class="card-text"><%= attendance.guest.first_name %> <%= attendance.guest.last_name %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="row justify-content-center mt-2">
+      <button class="btn btn-outline-warning btn-lg mx-3"><%= link_to 'Editer', edit_event_path(@event.id)%></button>
+      <button class="btn btn-outline-warning btn-lg mx-3"> <%= link_to "Adios", event_path(@event.id), method: :delete, data: { confirm: "Sûr ? Votre sentence est irrévocable !" } %></button>
+</div>
+</div>
+</div>

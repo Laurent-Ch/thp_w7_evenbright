@@ -1,11 +1,9 @@
-# frozen_string_literal: true
-
 class UserController < ApplicationController
-  before_action :authenticate_user!, :same_user?
+  before_action :authenticate_user!
 
   def show
     @user = User.find(params[:id])
-    @events = Event.where(host_id: current_user.id)
+    @events = Event.where(host: current_user)
   end
 
   def edit
@@ -26,16 +24,13 @@ class UserController < ApplicationController
 
   def destroy
     session.delete(:user_id)
-    puts '$' * 80
-    puts 'CALLED'
-    puts '$' * 80
     redirect_to root_path
   end
 
-  private
-
-  def same_user?
-    @user = User.find(params[:id])
-    current_user == @user ? nil : (redirect_to root_path)
-  end
+  # private
+# add by lolo - don't know the use
+  # def same_user?
+  #   @user = User.find(params[:id])
+  #   current_user == @user ? nil : (redirect_to root_path)
+  # end
 end
